@@ -1,25 +1,31 @@
+// https://github.com/RAHATosman/assignment-js
+
+
+// problem No- 1
 function kilometerToMeter(km) {
-    var meter = km * 1000;
-    var x = meter.toFixed(1);
-    return x;
+    var x = Math.abs(km);
+    var meter = x * 1000;
+
+    return meter;
 }
-var result = kilometerToMeter(8);
+var result = kilometerToMeter(4);
 console.log(result);
 
 
-
+// problem No- 2
 function budgetCalculator(watch, mobile , laptop) {
     var firstProduct = watch * 50;
     var seconedProduct = mobile * 100;
     var thirdProduct = laptop * 500;
-    var total = firstProduct + seconedProduct + thirdProduct;
+    var total = Math.abs(firstProduct) + Math.abs(seconedProduct) + Math.abs(thirdProduct);
     return total;
 }
-count = budgetCalculator(100,4,1);
+count = budgetCalculator(20,20,25);
 console.log(count);
 
-
-function hotelCost(day) {
+// problem No- 3
+function hotelCost(x) {
+    var day = Math.abs(x);
     var total = 0;
     if (day <= 10){
         total = day * 100;
@@ -39,12 +45,12 @@ function hotelCost(day) {
     }
     return total;
 }
-var count = hotelCost(45.5);
+var count = hotelCost(-7);
 console.log(count);
 
 
 
-
+// problem No- 4
 function megaFriend (friends) {
     var lgth = 0;
     var longest;
@@ -56,5 +62,5 @@ function megaFriend (friends) {
     }
     return longest;
 }
-result = megaFriend(["rahatosman", "jaber" , "akib"])
+result = megaFriend(["mahbub", "jaber" , "akib"])
 console.log(result);
